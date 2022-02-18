@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8549F7E2-9A4D-4FC2-BC4B-B085D0D42325}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MetroOrderManager</RootNamespace>
+    <AssemblyName>MetroOrderManager</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\..\..\OneDrive - Time Share Soluções\Área de Trabalho\Arquivos\Bunifu_UI_WinForms_5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress">
+      <HintPath>..\..\..\..\OneDrive - Time Share Soluções\Área de Trabalho\Arquivos\Bunifu_UI_WinForms_5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>..\..\..\..\OneDrive - Time Share Soluções\Área de Trabalho\Arquivos\Bunifu_UI_WinForms_5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
+      <HintPath>..\..\..\..\OneDrive - Time Share Soluções\Área de Trabalho\Arquivos\Bunifu_UI_WinForms_5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
+      <HintPath>..\..\..\..\OneDrive - Time Share Soluções\Área de Trabalho\Arquivos\Bunifu_UI_WinForms_5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\OneDrive - Time Share Soluções\Área de Trabalho\Arquivos\Bunifu_UI_WinForms_5.0.3\ui.winforms.5.0.3\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\FrmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDashboard.Designer.cs">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMainScreen.Designer.cs">
+      <DependentUpon>FrmMainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FrmDashboard.resx">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMainScreen.resx">
+      <DependentUpon>FrmMainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Images\icons8-adicionar-dólar-32.png" />
+    <Content Include="Resources\Images\icons8-adicionar-etiqueta-64.png" />
+    <Content Include="Resources\Images\icons8-adicionar-usuário-masculino-50.png" />
+    <Content Include="Resources\Images\icons8-ajuda-32.png" />
+    <Content Include="Resources\Images\icons8-ajuda-50.png" />
+    <Content Include="Resources\Images\icons8-barato-2-32.png" />
+    <Content Include="Resources\Images\icons8-bate-papo-50.png" />
+    <Content Include="Resources\Images\icons8-caixa-registradora-50.png" />
+    <Content Include="Resources\Images\icons8-calendário-10-50.png" />
+    <Content Include="Resources\Images\icons8-caminhão-de-comida-50.png" />
+    <Content Include="Resources\Images\icons8-cardápio-50.png" />
+    <Content Include="Resources\Images\icons8-carrinho-de-compras-50.png" />
+    <Content Include="Resources\Images\icons8-cesta-de-compras-completa-50.png" />
+    <Content Include="Resources\Images\icons8-chevron-right-64.png" />
+    <Content Include="Resources\Images\icons8-configurações-do-usuário-64.png" />
+    <Content Include="Resources\Images\icons8-crachá-50.png" />
+    <Content Include="Resources\Images\icons8-crescimento-de-estoques-64.png" />
+    <Content Include="Resources\Images\icons8-câmbio-monetário-64.png" />
+    <Content Include="Resources\Images\icons8-dados-de-saúde-50.png" />
+    <Content Include="Resources\Images\icons8-depósito-64.png" />
+    <Content Include="Resources\Images\icons8-dividendos-64.png" />
+    <Content Include="Resources\Images\icons8-empresa-cliente-50.png" />
+    <Content Include="Resources\Images\icons8-estetoscópio-50.png" />
+    <Content Include="Resources\Images\icons8-etiqueta-de-preço-50.png" />
+    <Content Include="Resources\Images\icons8-export-excel-50.png" />
+    <Content Include="Resources\Images\icons8-exportar-pdf-50.png" />
+    <Content Include="Resources\Images\icons8-fazer-upload-50.png" />
+    <Content Include="Resources\Images\icons8-fechar-janela-64.png" />
+    <Content Include="Resources\Images\icons8-imagem-completa-50.png" />
+    <Content Include="Resources\Images\icons8-lista-de-ingredientes-64.png" />
+    <Content Include="Resources\Images\icons8-logout-arredondado-50.png" />
+    <Content Include="Resources\Images\icons8-mais-calendário-64.png" />
+    <Content Include="Resources\Images\icons8-maximize-button-64.png" />
+    <Content Include="Resources\Images\icons8-microscópio-50.png" />
+    <Content Include="Resources\Images\icons8-minimizar-janela-64.png" />
+    <Content Include="Resources\Images\icons8-nova-mensagem-50.png" />
+    <Content Include="Resources\Images\icons8-pesquisar-50.png" />
+    <Content Include="Resources\Images\icons8-processador-64.png" />
+    <Content Include="Resources\Images\icons8-ram-de-smartphone-64.png" />
+    <Content Include="Resources\Images\icons8-remover-usuário-masculino-32.png" />
+    <Content Include="Resources\Images\icons8-remover-usuário-masculino-64.png" />
+    <Content Include="Resources\Images\icons8-resume-website-50.png" />
+    <Content Include="Resources\Images\icons8-saco-de-dinheiro-64.png" />
+    <Content Include="Resources\Images\icons8-sair-50.png" />
+    <Content Include="Resources\Images\icons8-slice-64.png" />
+    <Content Include="Resources\Images\icons8-subtração-64.png" />
+    <Content Include="Resources\Images\icons8-syringe-with-a-drop-of-blood-50.png" />
+    <Content Include="Resources\Images\icons8-usuário-de-gênero-neutro-50.png" />
+    <Content Include="Resources\Images\icons8-usuário-homem-com-círculo-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{90868b8f-1999-450f-b881-9453d6583028}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

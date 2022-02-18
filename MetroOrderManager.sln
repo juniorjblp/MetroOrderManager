@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetroOrderManager", "MetroOrderManager\MetroOrderManager.csproj", "{8549F7E2-9A4D-4FC2-BC4B-B085D0D42325}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{90868B8F-1999-450F-B881-9453D6583028}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8549F7E2-9A4D-4FC2-BC4B-B085D0D42325}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8549F7E2-9A4D-4FC2-BC4B-B085D0D42325}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8549F7E2-9A4D-4FC2-BC4B-B085D0D42325}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8549F7E2-9A4D-4FC2-BC4B-B085D0D42325}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90868B8F-1999-450F-B881-9453D6583028}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90868B8F-1999-450F-B881-9453D6583028}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90868B8F-1999-450F-B881-9453D6583028}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90868B8F-1999-450F-B881-9453D6583028}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1B8FC094-DEE5-47E7-9068-F16B18D16E66}
+	EndGlobalSection
+EndGlobal
