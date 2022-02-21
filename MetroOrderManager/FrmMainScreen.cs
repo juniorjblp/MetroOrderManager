@@ -1,13 +1,6 @@
 ﻿using Common;
 using MetroOrderManager.Forms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MetroOrderManager
@@ -20,9 +13,18 @@ namespace MetroOrderManager
         }
         private void FrmMainScreen_Load(object sender, EventArgs e)
         {
-            PnlLeft.Width = 60;
-            LblMenu.Visible = false;
-            OpenChildForm(new FrmDashboard());
+            try
+            {
+                PnlLeft.Width = 60;
+                LblMenu.Visible = false;
+                OpenChildForm(new FrmDashboard());
+                LblVersion.Text = Messages.SisMessages[0];
+                LblScreenTitle.Text = Messages.ScreenMessages[0];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro no carregamento da página", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         #region Open Children Forms
         private void OpenChildForm(object FormChild)
@@ -44,6 +46,13 @@ namespace MetroOrderManager
         {
             PbIndicator.Top = control.Top;
             PbIndicator.Height = control.Height;
+        }
+        #endregion
+
+        #region Clear screen title text
+        private void ClearScreenTitleText()
+        {
+            LblScreenTitle.Text = String.Empty;
         }
         #endregion
 
@@ -77,21 +86,29 @@ namespace MetroOrderManager
         {
             MoveIndicator((Control)sender);
             OpenChildForm(new FrmDashboard());
+            ClearScreenTitleText();
+            LblScreenTitle.Text = Messages.ScreenMessages[0];
         }
 
         private void BtnCustomers_Click(object sender, EventArgs e)
         {
             MoveIndicator((Control)sender);
+            ClearScreenTitleText();
+            LblScreenTitle.Text = Messages.ScreenMessages[1];
         }
 
         private void BtnProducts_Click(object sender, EventArgs e)
         {
             MoveIndicator((Control)sender);
+            ClearScreenTitleText();
+            LblScreenTitle.Text = Messages.ScreenMessages[2];
         }
 
         private void BtnOrders_Click(object sender, EventArgs e)
         {
             MoveIndicator((Control)sender);
+            ClearScreenTitleText();
+            LblScreenTitle.Text = Messages.ScreenMessages[3];
         }
     }
 }

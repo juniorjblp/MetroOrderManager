@@ -31,18 +31,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMainScreen));
             this.PnlContent = new Bunifu.UI.WinForms.BunifuPanel();
             this.PnlLeft = new Bunifu.UI.WinForms.BunifuPanel();
+            this.BtnDashboard = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.PbIndicator = new Bunifu.UI.WinForms.BunifuPanel();
             this.BtnOrders = new Bunifu.Framework.UI.BunifuFlatButton();
             this.BtnProducts = new Bunifu.Framework.UI.BunifuFlatButton();
             this.BtnCustomers = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.LblMenu = new Bunifu.UI.WinForms.BunifuLabel();
             this.BtnMenu = new Bunifu.Framework.UI.BunifuImageButton();
+            this.LblMenu = new Bunifu.UI.WinForms.BunifuLabel();
             this.PnlBotton = new Bunifu.UI.WinForms.BunifuPanel();
+            this.LblVersion = new System.Windows.Forms.Label();
             this.PnlHeader = new Bunifu.UI.WinForms.BunifuPanel();
             this.BtnClose = new Bunifu.Framework.UI.BunifuImageButton();
-            this.PbIndicator = new Bunifu.UI.WinForms.BunifuPanel();
-            this.BtnDashboard = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.LblScreenTitle = new System.Windows.Forms.Label();
             this.PnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMenu)).BeginInit();
+            this.PnlBotton.SuspendLayout();
             this.PnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnClose)).BeginInit();
             this.SuspendLayout();
@@ -83,6 +86,58 @@
             this.PnlLeft.ShowBorders = true;
             this.PnlLeft.Size = new System.Drawing.Size(200, 747);
             this.PnlLeft.TabIndex = 2;
+            // 
+            // BtnDashboard
+            // 
+            this.BtnDashboard.Activecolor = System.Drawing.Color.Transparent;
+            this.BtnDashboard.BackColor = System.Drawing.Color.Transparent;
+            this.BtnDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnDashboard.BorderRadius = 0;
+            this.BtnDashboard.ButtonText = "   Dashboard";
+            this.BtnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnDashboard.DisabledColor = System.Drawing.Color.Gray;
+            this.BtnDashboard.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDashboard.ForeColor = System.Drawing.SystemColors.Control;
+            this.BtnDashboard.Iconcolor = System.Drawing.Color.Transparent;
+            this.BtnDashboard.Iconimage = global::MetroOrderManager.Properties.Resources.icons8_dados_de_saúde_50;
+            this.BtnDashboard.Iconimage_right = null;
+            this.BtnDashboard.Iconimage_right_Selected = null;
+            this.BtnDashboard.Iconimage_Selected = null;
+            this.BtnDashboard.IconMarginLeft = 0;
+            this.BtnDashboard.IconMarginRight = 0;
+            this.BtnDashboard.IconRightVisible = true;
+            this.BtnDashboard.IconRightZoom = 0D;
+            this.BtnDashboard.IconVisible = true;
+            this.BtnDashboard.IconZoom = 90D;
+            this.BtnDashboard.IsTab = false;
+            this.BtnDashboard.Location = new System.Drawing.Point(6, 86);
+            this.BtnDashboard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BtnDashboard.Name = "BtnDashboard";
+            this.BtnDashboard.Normalcolor = System.Drawing.Color.Transparent;
+            this.BtnDashboard.OnHovercolor = System.Drawing.Color.Transparent;
+            this.BtnDashboard.OnHoverTextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnDashboard.selected = false;
+            this.BtnDashboard.Size = new System.Drawing.Size(172, 47);
+            this.BtnDashboard.TabIndex = 11;
+            this.BtnDashboard.Text = "   Dashboard";
+            this.BtnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnDashboard.Textcolor = System.Drawing.Color.White;
+            this.BtnDashboard.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click);
+            // 
+            // PbIndicator
+            // 
+            this.PbIndicator.BackgroundColor = System.Drawing.Color.DodgerBlue;
+            this.PbIndicator.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PbIndicator.BackgroundImage")));
+            this.PbIndicator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PbIndicator.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.PbIndicator.BorderRadius = 0;
+            this.PbIndicator.BorderThickness = 0;
+            this.PbIndicator.Location = new System.Drawing.Point(1, 86);
+            this.PbIndicator.Name = "PbIndicator";
+            this.PbIndicator.ShowBorders = true;
+            this.PbIndicator.Size = new System.Drawing.Size(5, 47);
+            this.PbIndicator.TabIndex = 0;
             // 
             // BtnOrders
             // 
@@ -198,6 +253,22 @@
             this.BtnCustomers.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCustomers.Click += new System.EventHandler(this.BtnCustomers_Click);
             // 
+            // BtnMenu
+            // 
+            this.BtnMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnMenu.BackColor = System.Drawing.Color.Transparent;
+            this.BtnMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnMenu.Image = global::MetroOrderManager.Properties.Resources.icons8_cardápio_50;
+            this.BtnMenu.ImageActive = null;
+            this.BtnMenu.Location = new System.Drawing.Point(150, 6);
+            this.BtnMenu.Name = "BtnMenu";
+            this.BtnMenu.Size = new System.Drawing.Size(40, 40);
+            this.BtnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BtnMenu.TabIndex = 3;
+            this.BtnMenu.TabStop = false;
+            this.BtnMenu.Zoom = 10;
+            this.BtnMenu.Click += new System.EventHandler(this.BtnMenu_Click);
+            // 
             // LblMenu
             // 
             this.LblMenu.AllowParentOverrides = false;
@@ -215,22 +286,6 @@
             this.LblMenu.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.LblMenu.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // BtnMenu
-            // 
-            this.BtnMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnMenu.BackColor = System.Drawing.Color.Transparent;
-            this.BtnMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnMenu.Image = global::MetroOrderManager.Properties.Resources.icons8_cardápio_50;
-            this.BtnMenu.ImageActive = null;
-            this.BtnMenu.Location = new System.Drawing.Point(150, 6);
-            this.BtnMenu.Name = "BtnMenu";
-            this.BtnMenu.Size = new System.Drawing.Size(40, 40);
-            this.BtnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.BtnMenu.TabIndex = 3;
-            this.BtnMenu.TabStop = false;
-            this.BtnMenu.Zoom = 10;
-            this.BtnMenu.Click += new System.EventHandler(this.BtnMenu_Click);
-            // 
             // PnlBotton
             // 
             this.PnlBotton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -239,12 +294,25 @@
             this.PnlBotton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.PnlBotton.BorderRadius = 0;
             this.PnlBotton.BorderThickness = 0;
+            this.PnlBotton.Controls.Add(this.LblVersion);
             this.PnlBotton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.PnlBotton.Location = new System.Drawing.Point(0, 775);
             this.PnlBotton.Name = "PnlBotton";
             this.PnlBotton.ShowBorders = true;
             this.PnlBotton.Size = new System.Drawing.Size(1283, 15);
             this.PnlBotton.TabIndex = 1;
+            // 
+            // LblVersion
+            // 
+            this.LblVersion.AutoSize = true;
+            this.LblVersion.BackColor = System.Drawing.Color.Transparent;
+            this.LblVersion.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblVersion.ForeColor = System.Drawing.SystemColors.Control;
+            this.LblVersion.Location = new System.Drawing.Point(1204, 0);
+            this.LblVersion.Name = "LblVersion";
+            this.LblVersion.Size = new System.Drawing.Size(64, 15);
+            this.LblVersion.TabIndex = 0;
+            this.LblVersion.Text = "lblversion";
             // 
             // PnlHeader
             // 
@@ -254,6 +322,7 @@
             this.PnlHeader.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.PnlHeader.BorderRadius = 0;
             this.PnlHeader.BorderThickness = 0;
+            this.PnlHeader.Controls.Add(this.LblScreenTitle);
             this.PnlHeader.Controls.Add(this.BtnClose);
             this.PnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.PnlHeader.Location = new System.Drawing.Point(0, 0);
@@ -278,57 +347,17 @@
             this.BtnClose.Zoom = 10;
             this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
-            // PbIndicator
+            // LblScreenTitle
             // 
-            this.PbIndicator.BackgroundColor = System.Drawing.Color.DodgerBlue;
-            this.PbIndicator.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PbIndicator.BackgroundImage")));
-            this.PbIndicator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PbIndicator.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.PbIndicator.BorderRadius = 0;
-            this.PbIndicator.BorderThickness = 0;
-            this.PbIndicator.Location = new System.Drawing.Point(1, 86);
-            this.PbIndicator.Name = "PbIndicator";
-            this.PbIndicator.ShowBorders = true;
-            this.PbIndicator.Size = new System.Drawing.Size(5, 47);
-            this.PbIndicator.TabIndex = 0;
-            // 
-            // BtnDashboard
-            // 
-            this.BtnDashboard.Activecolor = System.Drawing.Color.Transparent;
-            this.BtnDashboard.BackColor = System.Drawing.Color.Transparent;
-            this.BtnDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnDashboard.BorderRadius = 0;
-            this.BtnDashboard.ButtonText = "   Dashboard";
-            this.BtnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnDashboard.DisabledColor = System.Drawing.Color.Gray;
-            this.BtnDashboard.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDashboard.ForeColor = System.Drawing.SystemColors.Control;
-            this.BtnDashboard.Iconcolor = System.Drawing.Color.Transparent;
-            this.BtnDashboard.Iconimage = global::MetroOrderManager.Properties.Resources.icons8_dados_de_saúde_50;
-            this.BtnDashboard.Iconimage_right = null;
-            this.BtnDashboard.Iconimage_right_Selected = null;
-            this.BtnDashboard.Iconimage_Selected = null;
-            this.BtnDashboard.IconMarginLeft = 0;
-            this.BtnDashboard.IconMarginRight = 0;
-            this.BtnDashboard.IconRightVisible = true;
-            this.BtnDashboard.IconRightZoom = 0D;
-            this.BtnDashboard.IconVisible = true;
-            this.BtnDashboard.IconZoom = 90D;
-            this.BtnDashboard.IsTab = false;
-            this.BtnDashboard.Location = new System.Drawing.Point(6, 86);
-            this.BtnDashboard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.BtnDashboard.Name = "BtnDashboard";
-            this.BtnDashboard.Normalcolor = System.Drawing.Color.Transparent;
-            this.BtnDashboard.OnHovercolor = System.Drawing.Color.Transparent;
-            this.BtnDashboard.OnHoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.BtnDashboard.selected = false;
-            this.BtnDashboard.Size = new System.Drawing.Size(172, 47);
-            this.BtnDashboard.TabIndex = 11;
-            this.BtnDashboard.Text = "   Dashboard";
-            this.BtnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnDashboard.Textcolor = System.Drawing.Color.White;
-            this.BtnDashboard.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click);
+            this.LblScreenTitle.AutoSize = true;
+            this.LblScreenTitle.BackColor = System.Drawing.Color.Transparent;
+            this.LblScreenTitle.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblScreenTitle.ForeColor = System.Drawing.SystemColors.Control;
+            this.LblScreenTitle.Location = new System.Drawing.Point(12, 3);
+            this.LblScreenTitle.Name = "LblScreenTitle";
+            this.LblScreenTitle.Size = new System.Drawing.Size(106, 21);
+            this.LblScreenTitle.TabIndex = 2;
+            this.LblScreenTitle.Text = "lblscreentitle";
             // 
             // FrmMainScreen
             // 
@@ -347,7 +376,10 @@
             this.PnlLeft.ResumeLayout(false);
             this.PnlLeft.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMenu)).EndInit();
+            this.PnlBotton.ResumeLayout(false);
+            this.PnlBotton.PerformLayout();
             this.PnlHeader.ResumeLayout(false);
+            this.PnlHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnClose)).EndInit();
             this.ResumeLayout(false);
 
@@ -367,6 +399,8 @@
         private Bunifu.UI.WinForms.BunifuPanel PnlContent;
         private Bunifu.UI.WinForms.BunifuPanel PbIndicator;
         private Bunifu.Framework.UI.BunifuFlatButton BtnDashboard;
+        private System.Windows.Forms.Label LblVersion;
+        public System.Windows.Forms.Label LblScreenTitle;
     }
 }
 
